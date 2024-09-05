@@ -1,0 +1,184 @@
+@font-face { font-family: Sarabun; src: url('fonts/Sarabun-Regular.ttf'); }
+@font-face { font-family: BebasNeue; src: url('fonts/BebasNeue-Regular.ttf'); }
+
+body {
+    text-align: center;
+    background-image: linear-gradient(rgb(0, 24, 23), rgb(0, 19, 128)), url('BS2023bgscrllanim.webp');
+	background-position: bottom;
+	background-repeat: repeat;
+	background-attachment: fixed;
+    background-blend-mode: overlay;
+
+    color: white;
+    font-family: Sarabun;
+}
+
+#backgroundlayer{
+    background-color: rgba(255, 255, 255, 0);
+    display:inline-block;
+    position:fixed;
+    left: 17.5%;
+    top: -5.5%;
+    min-width: 800px;
+    width: 65%;
+    height: 120%;
+    z-index: -4;
+    backdrop-filter: blur(32px);
+}
+
+@media (max-width: 1280px) {
+    #backgroundlayer{
+        left: 0px;
+        width: 100%;
+        height: 120%;
+        z-index: -4;
+        backdrop-filter: blur(32px);
+    }
+}
+
+.socials {
+    display:contents;
+    z-index: 8;
+}
+
+.social_icon {
+    cursor: pointer;
+    padding-top: 16px;
+    height: 80%;
+    max-width:48px;
+    border-radius: 16px;
+}
+
+#logo {
+    display:contents;
+    text-align: left;
+    justify-content: center;
+    font-size: x-large;
+}
+
+#logo b {
+    display:contents;
+    text-align: left;
+    justify-content: center;
+    font-size: 300%;
+}
+
+
+#logo img {
+    right: 50%;
+    height: 142px;
+    width: 142px;    
+    transform: translate(-32px, 48px);    
+}
+
+#projects {
+    display:inline-flex;
+    position: relative;
+    height: auto;
+    width: 60%;
+    padding-top: 20px;
+    padding-bottom: 35px;    
+    margin-left: 20%;
+    margin-right: 20%;        
+    align-items: center;
+    float: left;
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    justify-content: center;
+}
+
+.project {
+    display:inline;
+
+    color:White;
+    border-radius: 32px;
+
+    min-width: 280px;
+    max-width: 375px;
+    width: calc(100% / 4);
+    height: 200px;
+
+    text-shadow: 2px 4px black;
+    font-family: BebasNeue;
+    font-size: larger;
+    font-weight: bolder;
+
+    padding:15px;
+    background-size: cover;
+    background-blend-mode: overlay;
+
+    border: 1px white solid;
+
+    overflow:hidden
+}
+
+.project .informal {
+    display:table;
+    table-layout: fixed;
+    flex-wrap: wrap;
+    position: relative;
+    color:white;
+    font-family: Sarabun;
+
+    right:5%;
+    transform: translateY(190%);
+
+    width: 110%;
+    height: 33%;
+    backdrop-filter: blur(16px);
+    border-top: 3px rgba(255, 255, 255, 0.435) solid;    
+}
+
+.project .selector {
+    display:table;
+    table-layout: fixed;
+    flex-wrap: wrap;
+    position: relative;
+    color:white;
+    font-family: Sarabun;
+
+    right:5%;
+    transform: translateY(190%);
+
+    width: 110%;
+    height: 33%;
+    backdrop-filter: blur(16px);
+    border-top: 3px rgba(255, 255, 255, 0.435) solid;    
+}
+
+.project .selector .link {
+    display:table-cell;
+    height: 100%;
+    left: 0px;
+    right: 0px;
+
+    border-right: 3px rgba(255, 255, 255, 0.323) solid;
+}
+
+.project .selector :hover{
+    cursor: pointer;
+
+    color:yellow;
+    background-image: linear-gradient(rgba(255, 255, 0, 0.037), rgb(197, 145, 0));
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transform: translateY(-3.5%);
+}
+
+.project .selector .link .linktag {
+    transform: translateY(55%);
+}
+
+.project .selector .link :hover {
+    background: none;
+}
+
+.project .linktag {
+    cursor: default;
+    transform: translateY(45%);
+}
