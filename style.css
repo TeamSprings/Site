@@ -94,17 +94,14 @@ body {
 .video {
     border-radius: 32px;
 
-    min-width: 280px;
+    min-width: 320px;
     max-width: 1000px;
     width: calc(100% / 3);
     height: calc(100vw / 5.428);
+    min-height: 180px;
 
     border: 1px white solid;
     overflow:hidden;
-}
-
-hr {
-    width: 45%;
 }
 
 .project {
