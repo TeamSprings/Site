@@ -3,18 +3,21 @@
 
 body {
     text-align: center;
-    background-image: linear-gradient(rgb(0, 24, 23), rgb(0, 19, 128)), url('BS2023bgscrllanim.webp');
+    background-image: url('backgroundanim.gif');
 	background-position: bottom;
 	background-repeat: repeat;
 	background-attachment: fixed;
     background-blend-mode: overlay;
+    background-size: cover;
 
     color: white;
     font-family: Sarabun;
+
+    user-select: text;
 }
 
 #backgroundlayer{
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(17, 25, 95, 0.168);  
     display:inline-block;
     position:fixed;
     left: 17.5%;
@@ -23,7 +26,7 @@ body {
     width: 65%;
     height: 120%;
     z-index: -4;
-    backdrop-filter: blur(32px);
+    backdrop-filter: blur(10px);
 }
 
 @media all and (max-width: 1280px) {
@@ -48,7 +51,10 @@ body {
     height: 80%;
     max-width:48px;
     max-height: 48px;
-    border-radius: 16px;
+}
+
+.social_icon:hover {
+    filter: brightness(50%) saturate(200%) hue-rotate(50deg);
 }
 
 #logo {
@@ -56,6 +62,8 @@ body {
     text-align: left;
     justify-content: center;
     font-size: x-large;
+
+    user-select: none;
 }
 
 #logo b {
@@ -63,6 +71,7 @@ body {
     text-align: left;
     justify-content: center;
     font-size: 300%;
+    text-shadow: 4px 4px rgb(30, 39, 104);
 }
 
 
@@ -126,6 +135,9 @@ body {
 
     border: 1px white solid;
 
+    mask: radial-gradient(circle 2px at top left, transparent 98%, black);
+    mask-size: 100% 100%;
+
     overflow:hidden;
 }
 
@@ -168,7 +180,9 @@ body {
 
     width: 110%;
     height: 33%;
-    border-top: 3px rgba(255, 255, 255, 0.435) solid;    
+    border-top: 3px rgba(255, 255, 255, 0.435) solid;
+    
+    overflow:hidden;
 }
 
 .project .selector .link {
@@ -177,14 +191,18 @@ body {
     left: 0px;
     right: 0px;
 
-    border-right: 3px rgba(255, 255, 255, 0.323) solid;
+    border-right: 1px rgba(255, 255, 255, 0.323) solid;
+    border-left: 1px rgba(255, 255, 255, 0.323) solid;
+    overflow: hidden;
 }
 
 .project .selector :hover{
-    cursor: pointer;
+    cursor: pointer;    
 
     color:yellow;
     background-image: linear-gradient(rgba(255, 255, 0, 0.037), rgb(197, 145, 0));
+
+    clip-path: rounded-rectangle(32px);
 }
 
 a {
